@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=FossilCoin
+Comment=FossilCoin P2P Cryptocurrency
+Comment[fr]=FossilCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=FossilCoin, eşten eşe kriptografik sanal para birimi
+Exec=fossilcoin-qt %u
+Terminal=false
+Type=Application
+Icon=fossilcoin128
+MimeType=x-scheme-handler/fossilcoin;
+Categories=Office;Finance;

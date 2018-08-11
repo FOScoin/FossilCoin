@@ -1,0 +1,26 @@
+[Unit]
+Description=FossilCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=fossilcoin
+Group=fossilcoin
+
+Type=forking
+PIDFile=/var/lib/fossilcoind/fossilcoind.pid
+
+ExecStart=/usr/bin/fossilcoind -daemon -pid=/var/lib/fossilcoind/fossilcoind.pid \
+          -conf=/etc/fossilcoin/fossilcoin.conf -datadir=/var/lib/fossilcoind
+
+ExecStop=-/usr/bin/fossilcoin-cli -conf=/etc/fossilcoin/fossilcoin.conf \
+         -datadir=/var/lib/fossilcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

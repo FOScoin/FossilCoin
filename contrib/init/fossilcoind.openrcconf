@@ -1,0 +1,26 @@
+# /etc/conf.d/fossilcoind: config file for /etc/init.d/fossilcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/fossilcoin/fossilcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/fossilcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/fossilcoind.pid"
+
+# Where to write fossilcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/fossilcoind"
+
+# User and group to own fossilcoind process
+#BITCOIND_USER="fossilcoin"
+#BITCOIND_GROUP="fossilcoin"
+
+# Path to fossilcoind executable
+#BITCOIND_BIN="/usr/bin/fossilcoind"
+
+# Nice value to run fossilcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
